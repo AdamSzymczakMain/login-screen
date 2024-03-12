@@ -1,0 +1,93 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: "Robot";
+}
+
+body {
+  background-image: linear-gradient(
+    to right,
+    #fefefe,
+    #eca87b,
+    #ead16b,
+    #d1ef5a,
+    #97f2f5,
+    #e17aed
+  );
+  display: flex;
+  align-content: center;
+}
+
+// colors
+
+$color-text: #fff;
+
+$color-text-darken: darken($color-text, 5%);
+$color-text-x-darken: darken($color-text, 10%);
+
+$color-text-lighten: lighten($color-text, 5%);
+$color-text-x-lighten: lighten($color-text, 10%);
+$color-text-xxx-lighten: lighten($color-text, 35%);
+
+// fonts
+
+$font-size-mini: 0.5em;
+$font-size-small: 1em;
+$font-size-small-plus: 1.2em;
+$font-size-base: 1.5em;
+$font-size-large: 2em;
+$font-size-base: 1.5em;
+$font-size-large: 2em;
+$font-size-xlarge: 2.3em;
+$font-size-xxlarge: 3em;
+$font-size-xx-large: 4em;
+$font-size-xxx-large: 5em;
+$font-size-xxxx-large: 6em;
+
+// padding & margin
+
+$gap-base: 0.5em;
+$gap-large: 2em;
+
+$margin-micro: 0.2rem;
+$margin-mini: 0.5rem;
+$margin-small: 1rem;
+$margin-base: 1.25rem;
+$margin-medium: 1.5rem;
+$margin-large: 1.75rem;
+$margin-x-large: 2rem;
+$margin-xx-large: 2.25rem;
+$margin-xxx-large: 2.5rem;
+
+$margin-auto: auto;
+
+$padding-small: 0.3em;
+$padding-base: 0.5em;
+$padding-base-plus: 0.7em;
+$padding-medium: 1em;
+$padding-medi-plus: 1.3em;
+$padding-large: 1.5em;
+$padding-x-large: 2em;
+$padding-xx-large: 2.5em;
+$padding-xxx-large: 3em;
+
+// width
+
+$width-medium: 450px;
+$width-large: 650px;
+$width-x-large: 800px;
+$width-xx-large: 1000px;
+$width-xxx-large: 1200px;
+$width-xxxx-large: 1400px;
+
+//mixin
+
+@mixin flex($direction: row, $justify: center, $align: center, $gap: 10px) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}

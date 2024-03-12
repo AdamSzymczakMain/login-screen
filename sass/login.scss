@@ -1,0 +1,20 @@
+@import "variables";
+
+.login {
+  max-width: $width-large;
+  margin: auto;
+  text-align: center;
+
+  .logo::after {
+    content: BETA;
+  }
+
+  input {
+    width: 150px;
+    height: 25px;
+  }
+
+  img {
+    height: 85px;
+  }
+}

@@ -1,0 +1,29 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: "Robot";
+}
+
+body {
+  background-image: linear-gradient(to right, #fefefe, #eca87b, #ead16b, #d1ef5a, #97f2f5, #e17aed);
+  display: flex;
+  align-content: center;
+}
+
+.login {
+  max-width: 650px;
+  margin: auto;
+  text-align: center;
+}
+.login .logo::after {
+  content: BETA;
+}
+.login input {
+  width: 150px;
+  height: 25px;
+}
+.login img {
+  height: 85px;
+}
