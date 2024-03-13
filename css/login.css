@@ -8,22 +8,80 @@
 
 body {
   background-image: linear-gradient(to right, #fefefe, #eca87b, #ead16b, #d1ef5a, #97f2f5, #e17aed);
-  display: flex;
-  align-content: center;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .login {
-  max-width: 650px;
-  margin: auto;
   text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.login .logo {
+  position: relative;
+  width: 450px;
 }
 .login .logo::after {
-  content: BETA;
+  content: "BETA";
+  position: absolute;
+  top: 66%;
+  left: 92%;
+  transform: translateX(-50%) translateY(-50%);
+  margin-left: 5px;
+  color: rgb(192, 43, 43);
+  font-weight: 700;
+  font-size: 1.1em;
+}
+.login .logo img {
+  height: 90px;
 }
 .login input {
-  width: 150px;
-  height: 25px;
+  width: 450px;
+  height: 55px;
+  border: 2px solid black;
+  border-radius: 10px;
 }
 .login img {
   height: 85px;
+}
+
+.username {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 5px;
+}
+.username-text {
+  font-size: 1.5em;
+}
+
+.password {
+  padding-top: 0.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 5px;
+}
+.password-text {
+  font-size: 1.5em;
+}
+
+button {
+  font-size: 1.5em;
+  margin-top: 1.25rem;
+  width: 450px;
+  height: 55px;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: background-color 0.3s;
+}
+button:hover {
+  background-image: linear-gradient(to right, #fefefe, #eca87b, #ead16b, #d1ef5a, #97f2f5, #e17aed);
+  background-color: transparent;
+  font-weight: 600;
 }

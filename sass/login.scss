@@ -1,20 +1,91 @@
 @import "variables";
 
 .login {
-  max-width: $width-large;
-  margin: auto;
   text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
-  .logo::after {
-    content: BETA;
+  .logo {
+    position: relative;
+    width: 450px;
+    &::after {
+      content: "BETA";
+      position: absolute;
+      top: 66%;
+      left: 92%;
+      transform: translateX(-50%) translateY(-50%);
+      margin-left: 5px;
+      color: rgb(192, 43, 43);
+      font-weight: 700;
+      font-size: 1.1em;
+    }
+    & img {
+      height: 90px;
+    }
   }
 
   input {
-    width: 150px;
-    height: 25px;
+    width: 450px;
+    height: 55px;
+    border: 2px solid black;
+    border-radius: 10px;
   }
 
   img {
     height: 85px;
+  }
+}
+
+.username {
+  @include flex(
+    $direction: column,
+    $justify: flex-start,
+    $align: flex-start,
+    $gap: 5px
+  );
+
+  &-text {
+    font-size: $font-size-base;
+  }
+}
+
+.password {
+  padding-top: $padding-base;
+  @include flex(
+    $direction: column,
+    $justify: flex-start,
+    $align: flex-start,
+    $gap: 5px
+  );
+
+  &-text {
+    font-size: $font-size-base;
+  }
+}
+
+button {
+  font-size: $font-size-base;
+  margin-top: $margin-base;
+  width: 450px;
+  height: 55px;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-image: linear-gradient(
+      to right,
+      #fefefe,
+      #eca87b,
+      #ead16b,
+      #d1ef5a,
+      #97f2f5,
+      #e17aed
+    );
+    background-color: transparent;
+    font-weight: 600;
   }
 }
